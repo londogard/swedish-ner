@@ -18,7 +18,7 @@ def predict(model, text):
     return render_ner_html(manual_sentence, wrap_page=False)
 
 st.title("Swedish Named Entity Recognition (NER) tagger")
-st.subheader("Created by: Londogard AB (Hampus Londögård)")
+st.subheader("Created by [Londogard](https://londogard.com) (Hampus Londögård)")
 
 tagger = load_model()
 st.title("Please type something in the box below")
