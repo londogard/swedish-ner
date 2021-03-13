@@ -4,6 +4,7 @@ from flair.models import SequenceTagger
 from flair.visual.ner_html import render_ner_html
 from streamlit import caching
 
+
 # load tagger for POS and
 @st.cache(allow_output_mutation=True)
 def load_model():
@@ -14,7 +15,7 @@ def load_model():
 def predict(model, text):
     manual_sentence = Sentence(manual_user_input)
     model.predict(manual_sentence)
-    return render_ner_html(manual_sentence)
+    return render_ner_html(manual_sentence, wrap_page=False)
 
 st.title("Swedish Named Entity Recognition (NER) tagger")
 st.subheader("Created by: Londogard AB (Hampus Londögård)")
