@@ -3,7 +3,10 @@ from flair.data import Sentence
 from flair.models import SequenceTagger
 from flair.visual.ner_html import render_ner_html
 from streamlit import caching
+import pathlib
 
+temp = pathlib.WindowsPath
+pathlib.WindowsPath = pathlib.PosixPath
 
 # load tagger for POS and
 @st.cache(allow_output_mutation=True)
