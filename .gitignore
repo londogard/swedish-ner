@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Custom
+kb-bert-cased-ner-optimized-quantized.onnx
